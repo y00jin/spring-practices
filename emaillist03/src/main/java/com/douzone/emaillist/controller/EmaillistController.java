@@ -20,16 +20,14 @@ public class EmaillistController {
 //	@ResponseBody
 	@RequestMapping("")
 	public String index(Model model) {
-		
 		List<EmaillistVo> list = emaillistRepository.findAll();
 		model.addAttribute("list", list);
-
-		return "/WEB-INF/views/index.jsp";
+		return "index";
 	}
 	
 	@RequestMapping(value="/add", method=RequestMethod.GET)
 	public String add() {
-		return "/WEB-INF/views/add.jsp";
+		return "add";
 	}
 	
 	@RequestMapping(value="/add", method=RequestMethod.POST)
