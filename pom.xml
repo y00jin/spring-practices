@@ -10,5 +10,6 @@
   	<module>emaillist03</module>
   	<module>guestbook03</module>
   	<module>fileupload</module>
+  	<module>logex</module>
   </modules>
 </project>
