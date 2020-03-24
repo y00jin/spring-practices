@@ -1,12 +1,11 @@
 package com.douzone.container.soundsystem;
 
-import javax.inject.Named;
-
 import org.springframework.stereotype.Component;
 
-//@Component("HighSchoolRapper3Final")
+// 빈에는 ID가 있는데 해당 클래스의 앞글자를 소문자로 만들어 자동으로 생성된다.
+//@Component("highSchoolRapper3Final")
+//@Named("highSchoolRapper3Final")
 @Component
-//@Named("HighSchoolRapper3Final")
 public class HighSchoolRapper3Final implements CompactDisc {
 
 	private String title = "지구멸망";

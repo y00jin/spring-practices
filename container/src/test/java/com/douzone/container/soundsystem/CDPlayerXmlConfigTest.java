@@ -21,8 +21,8 @@ import config.soundsystem.CDPlayerConfig;
 // 결과 애플리케이션 컨텍스트는 빈을 포함한다.
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes=CDPlayerConfig.class)
-public class CDPlayerJavaConfigTest {
+@ContextConfiguration(locations= {"classpath:config/soundsystem/CDPlayerConfig.xml"})
+public class CDPlayerXmlConfigTest {
 	
 	@Rule
 	public final SystemOutRule systemOutRule= new SystemOutRule().enableLog();
