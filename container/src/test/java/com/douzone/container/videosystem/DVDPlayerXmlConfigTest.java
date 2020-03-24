@@ -133,7 +133,7 @@ public class DVDPlayerXmlConfigTest {
 	@Test
 	public void testDVD9() {
 		assertNotNull(dvd9);
-		System.out.println("dvd9 : " + dvd9);
+		System.out.println(dvd9);
 		assertEquals(
 				"BlankDisc [title=Avengers Expansion Pack2, studio=MARVEL, actors=[Robert Downey Jr., Scarlett, Chris Evans]]",
 				systemOutRule.getLog().replace("\r\n", "").replace("\r\n", ""));
@@ -142,7 +142,7 @@ public class DVDPlayerXmlConfigTest {
 	@Test
 	public void testDVD10() {
 		assertNotNull(dvd10);
-		System.out.println("dvd10 : " + dvd10);
+		System.out.println(dvd10);
 		assertEquals(
 				"BlankDisc [title=Avengers Expansion Pack2, studio=MARVEL, actors=[Robert Downey Jr., Scarlett, Chris Evans]]",
 				systemOutRule.getLog().replace("\r\n", "").replace("\r\n", ""));
