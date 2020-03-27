@@ -13,7 +13,8 @@
 	<packaging>jar</packaging>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
 	<dependencyManagement>
@@ -35,12 +36,13 @@
 			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
 
-		<!-- spring boot devtools : reload -->
+		<!-- spring boot devtools: live reload -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
-		
+
+
 		<!-- spring boot web starter -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -53,12 +55,12 @@
 			<artifactId>jstl</artifactId>
 		</dependency>
 
-		<!-- tomcat jasper (jsp -> servlet) -->
+		<!-- tomcat jasper -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
-		
+
 		<!-- test -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -74,12 +76,32 @@
 	</dependencies>
 
 	<build>
+		<finalName>hellospring06</finalName>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<resources>
+			<resource>
+				<directory>${project.basedir}/src/main/resources</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<fork>true</fork>
+					<mainClass>com.douzone.hellospring.BootApp</mainClass>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
-	
 </project>
